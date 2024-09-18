@@ -14,7 +14,7 @@ pipeline
             {
                 script
                 {
-                    actualYear = new SimpleDateFormat("yyyy").parse(new Date())
+                    actualYear = new SimpleDateFormat("dd-MM-yyyy").format(new Date())
                     yearsCalculated = Integer.parseInt(actualYear) - fechaNacimiento.getYear()
                     resultado = "Tu edad actual es: " + yearsCalculated
                     println(resultado)
