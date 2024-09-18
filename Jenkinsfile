@@ -8,13 +8,13 @@ pipeline
     agent any
     stages
     {
-        stage("Realizar suma")
+        stage("Calcular año")
         {
             steps
             {
                 script
                 {
-                    Date actualYear = new SimpleDateFormat("dd-MM-yyyy").format(new Date())
+                    Date actualYear = new Date()
                     yearsCalculated = Integer.parseInt(actualYear.getYear()) - fechaNacimiento.getYear()
                     resultado = "Tu edad actual es: " + yearsCalculated
                     println(resultado)
